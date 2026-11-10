@@ -1,0 +1,1125 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Putri Fitriani Safira | Portfolio</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+
+    /* =========================
+       GLOBAL STYLE
+    ========================= */
+
+    :root {
+        --navy: #101c2c;
+        --green: #183d3a;
+        --gold: #c5a572;
+        --ivory: #f5f1e9;
+        --white: #ffffff;
+        --text: #263548;
+        --gray: #78818b;
+        --border: #e7e0d4;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: var(--ivory);
+        color: var(--text);
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: 86%;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    section {
+        padding: 100px 0;
+        scroll-margin-top: 80px;
+    }
+
+    /* =========================
+       NAVBAR
+    ========================= */
+
+    header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: rgba(16,28,44,.97);
+        backdrop-filter: blur(15px);
+        border-bottom: 1px solid #ffffff15;
+    }
+
+    .navbar {
+        min-height: 78px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        color: var(--gold);
+        font-size: 23px;
+        font-weight: 800;
+    }
+
+    .logo span {
+        color: white;
+    }
+
+    .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .nav-links a {
+        text-decoration: none;
+        color: #e5e9ed;
+        font-size: 13px;
+        font-weight: 500;
+        transition: .3s;
+    }
+
+    .nav-links a:hover {
+        color: var(--gold);
+    }
+
+    .menu-btn {
+        display: none;
+        background: transparent;
+        border: 1px solid var(--gold);
+        color: white;
+        padding: 8px 13px;
+        border-radius: 8px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+
+    /* =========================
+       HOME / HERO
+    ========================= */
+
+    .home {
+        min-height: 650px;
+        display: flex;
+        align-items: center;
+        color: white;
+
+        background:
+            radial-gradient(
+                circle at 85% 20%,
+                rgba(197,165,114,.16),
+                transparent 30%
+            ),
+            linear-gradient(
+                125deg,
+                #101c2c,
+                #183d3a
+            );
+    }
+
+    .home-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 60px;
+    }
+
+    .home-text {
+        max-width: 650px;
+    }
+
+    .home-text h4 {
+        color: var(--gold);
+        font-size: 15px;
+        letter-spacing: 4px;
+        margin-bottom: 18px;
+    }
+
+    .home-text h1 {
+        font-size: clamp(38px, 5vw, 65px);
+        line-height: 1.2;
+        font-weight: 800;
+        margin-bottom: 15px;
+    }
+
+    .home-text h1 span {
+        color: var(--gold);
+    }
+
+    .home-text h2 {
+        color: #d5dfdf;
+        font-size: 19px;
+        font-weight: 500;
+        margin-bottom: 20px;
+    }
+
+    .home-text p {
+        color: #bdc8ca;
+        font-size: 14px;
+        line-height: 2;
+    }
+
+    /* SOCIAL */
+
+    .social-links {
+        display: flex;
+        gap: 12px;
+        margin-top: 25px;
+        flex-wrap: wrap;
+    }
+
+    .social-links a {
+        color: var(--gold);
+        border: 1px solid #c5a57280;
+        padding: 9px 20px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-size: 12px;
+        transition: .3s;
+    }
+
+    .social-links a:hover {
+        background: var(--gold);
+        color: var(--navy);
+    }
+
+    /* BUTTON */
+
+    .buttons {
+        display: flex;
+        gap: 15px;
+        margin-top: 30px;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 13px 25px;
+        border-radius: 6px;
+        background: var(--gold);
+        color: var(--navy);
+        font-size: 13px;
+        font-weight: 700;
+        text-decoration: none;
+        transition: .3s;
+    }
+
+    .btn:hover {
+        background: white;
+        transform: translateY(-4px);
+    }
+
+    .btn-outline {
+        color: white;
+        background: transparent;
+        border: 1px solid var(--gold);
+    }
+
+    .btn-outline:hover {
+        color: var(--navy);
+    }
+
+    /* PROFILE PHOTO */
+
+    .profile {
+        width: 310px;
+        height: 390px;
+        flex-shrink: 0;
+        padding: 10px;
+        background: #ffffff15;
+        border: 1px solid #c5a572;
+        border-radius: 160px 160px 18px 18px;
+        box-shadow: 0 20px 55px #00000035;
+        overflow: hidden;
+    }
+
+    .profile img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 150px 150px 12px 12px;
+    }
+
+    /* =========================
+       SECTION TITLE
+    ========================= */
+
+    .section-title {
+        text-align: center;
+        margin-bottom: 55px;
+    }
+
+    .section-title h2 {
+        font-size: 36px;
+        color: var(--navy);
+        font-weight: 800;
+    }
+
+    .section-title h2 span {
+        color: #a88753;
+    }
+
+    .section-title p {
+        color: var(--gray);
+        font-size: 13px;
+        margin-top: 12px;
+    }
+
+    /* =========================
+       ABOUT
+    ========================= */
+
+    .about {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+
+    .about-card {
+        background: white;
+        padding: 35px;
+        border-radius: 14px;
+        border: 1px solid var(--border);
+        box-shadow: 0 15px 45px #101c2c0d;
+        transition: .3s;
+    }
+
+    .about-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .about-card h3 {
+        font-size: 21px;
+        color: var(--green);
+        margin-bottom: 20px;
+    }
+
+    .about-card p {
+        color: var(--gray);
+        font-size: 13px;
+        line-height: 2;
+    }
+
+    /* PERSONAL INFO */
+
+    .info {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .info-item {
+        padding: 16px;
+        background: #f8f6f1;
+        border-radius: 9px;
+        border-left: 3px solid var(--gold);
+    }
+
+    .info-item h4 {
+        color: #a88753;
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+
+    .info-item p {
+        color: var(--navy);
+        font-size: 12px;
+    }
+
+    /* =========================
+       EDUCATION
+    ========================= */
+
+    .education {
+        background: #ece8df;
+    }
+
+    .education-card {
+        max-width: 750px;
+        margin: auto;
+        padding: 35px;
+        background: white;
+        border-radius: 12px;
+        border-left: 5px solid var(--gold);
+        box-shadow: 0 15px 45px #101c2c0d;
+        transition: .3s;
+    }
+
+    .education-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .education-card h3 {
+        font-size: 22px;
+        color: var(--navy);
+    }
+
+    .education-card h4 {
+        color: #a88753;
+        font-size: 14px;
+        margin: 10px 0;
+    }
+
+    .education-card p {
+        color: var(--gray);
+        font-size: 13px;
+    }
+
+    .status {
+        display: inline-block;
+        padding: 7px 14px;
+        margin-top: 15px;
+        border-radius: 30px;
+        background: #edf4ef;
+        color: #35674d;
+        font-size: 11px;
+    }
+
+    /* =========================
+       EXPERIENCE
+    ========================= */
+
+    .experience-card {
+        max-width: 750px;
+        margin: auto;
+        padding: 35px;
+        background: white;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        box-shadow: 0 15px 45px #101c2c0d;
+    }
+
+    .experience-card h3 {
+        color: var(--green);
+        margin-bottom: 15px;
+    }
+
+    .experience-card p {
+        color: var(--gray);
+        line-height: 2;
+        font-size: 13px;
+    }
+
+    /* =========================
+       SKILLS
+    ========================= */
+
+    .skills {
+        background: var(--navy);
+    }
+
+    .skills .section-title h2 {
+        color: white;
+    }
+
+    .skills .section-title p {
+        color: #aebbc1;
+    }
+
+    .skill-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+
+    .skill-card {
+        padding: 30px 20px;
+        text-align: center;
+        border-radius: 12px;
+        background: #1b2d3c;
+        border: 1px solid #344653;
+        transition: .35s;
+    }
+
+    .skill-card:hover {
+        transform: translateY(-8px);
+        border-color: var(--gold);
+        background: #203b42;
+    }
+
+    .skill-icon {
+        font-size: 34px;
+        color: var(--gold);
+        font-weight: 800;
+        margin-bottom: 15px;
+    }
+
+    .skill-card h3 {
+        color: white;
+        font-size: 17px;
+    }
+
+    .skill-card p {
+        color: var(--gold);
+        font-size: 12px;
+        margin-top: 8px;
+        letter-spacing: 1px;
+    }
+
+    /* =========================
+       PROJECTS
+    ========================= */
+
+    .project-card {
+        max-width: 850px;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        padding: 25px;
+        background: white;
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        box-shadow: 0 15px 45px #101c2c0d;
+        transition: .35s;
+    }
+
+    .project-card:hover {
+        transform: translateY(-7px);
+        box-shadow: 0 20px 45px #101c2c18;
+    }
+
+    .project-image {
+        min-width: 200px;
+        height: 170px;
+        border-radius: 10px;
+        background: linear-gradient(
+            135deg,
+            #183d3a,
+            #101c2c
+        );
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 65px;
+    }
+
+    .project-info h3 {
+        color: var(--green);
+        font-size: 21px;
+        margin-bottom: 10px;
+    }
+
+    .project-info p {
+        color: var(--gray);
+        font-size: 13px;
+        line-height: 1.9;
+    }
+
+    .tags {
+        margin-top: 15px;
+    }
+
+    .tag {
+        display: inline-block;
+        padding: 6px 13px;
+        margin: 3px;
+        background: #f3eee4;
+        color: #8c7044;
+        border-radius: 5px;
+        font-size: 11px;
+    }
+
+    /* =========================
+       CONTACT
+    ========================= */
+
+    .contact {
+        background: linear-gradient(
+            120deg,
+            #101c2c,
+            #183d3a
+        );
+        text-align: center;
+    }
+
+    .contact .section-title h2 {
+        color: white;
+    }
+
+    .contact .section-title p {
+        color: #c2ccca;
+    }
+
+    .contact-box p {
+        color: #c2ccca;
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+        padding: 25px;
+        text-align: center;
+        color: #aebbc1;
+        background: #0b1420;
+        font-size: 12px;
+    }
+
+    /* =========================
+       RESPONSIVE DESIGN
+    ========================= */
+
+    @media(max-width: 900px) {
+
+        .container {
+            width: 90%;
+        }
+
+        .home-content {
+            gap: 35px;
+        }
+
+        .home-text h1 {
+            font-size: 43px;
+        }
+
+        .profile {
+            width: 250px;
+            height: 320px;
+        }
+
+        .skill-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+    }
+
+    @media(max-width: 650px) {
+
+        section {
+            padding: 75px 0;
+        }
+
+        .menu-btn {
+            display: block;
+        }
+
+        .nav-links {
+            display: none;
+            position: absolute;
+            top: 78px;
+            left: 0;
+            width: 100%;
+            padding: 25px;
+            background: var(--navy);
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 20px;
+        }
+
+        .nav-links.active {
+            display: flex;
+        }
+
+        .home {
+            padding: 65px 0;
+        }
+
+        .home-content {
+            flex-direction: column-reverse;
+            text-align: center;
+        }
+
+        .home-text h1 {
+            font-size: 36px;
+        }
+
+        .home-text h2 {
+            font-size: 17px;
+        }
+
+        .social-links,
+        .buttons {
+            justify-content: center;
+        }
+
+        .profile {
+            width: 220px;
+            height: 285px;
+        }
+
+        .about {
+            grid-template-columns: 1fr;
+        }
+
+        .skill-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .project-card {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .project-image {
+            width: 100%;
+        }
+
+        .section-title h2 {
+            font-size: 29px;
+        }
+
+    }
+
+    @media(max-width: 380px) {
+
+        .skill-container,
+        .info {
+            grid-template-columns: 1fr;
+        }
+
+    }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <header>
+        <div class="container navbar">
+
+            <div class="logo">
+                 <span>Putri Fitriani Safira</span>
+            </div>
+
+            <button class="menu-btn" id="menuBtn">
+                ☰
+            </button>
+
+            <nav class="nav-links" id="navLinks">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#education">Education</a>
+                <a href="#experience">Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- HOME -->
+
+    <section class="home" id="home">
+
+        <div class="container home-content">
+
+            <div class="home-text">
+
+                <h4>HELLO, I'M</h4>
+
+                <h1>
+                    Putri Fitriani
+                    <span>Safira</span>
+                </h1>
+
+                <h2>Pelajar PPLG & Web Developer Pemula</h2>
+
+                <p>
+                    Saya merupakan siswi SMKN 1 Kawali
+                    jurusan Pengembangan Perangkat Lunak
+                    dan Gim (PPLG). Saya memiliki minat
+                    dalam pengembangan web dan teknologi
+                    serta terus berusaha mengembangkan
+                    kemampuan pemrograman.
+                </p>
+
+                <div class="social-links">
+
+                    <a href="https://www.linkedin.com/"
+                       target="_blank">
+                        LinkedIn
+                    </a>
+
+                    <a href="https://github.com/"
+                       target="_blank">
+                        GitHub
+                    </a>
+
+                </div>
+
+                <div class="buttons">
+
+                    <a href="cv-putri.pdf"
+                       class="btn"
+                       download>
+                        Download CV
+                    </a>
+
+                    <a href="#contact"
+                       class="btn btn-outline">
+                        Contact Me
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- FOTO PROFIL -->
+
+            <div class="profile">
+
+                <img
+                    src="foto-putri.jpg"
+                    alt="Foto Putri"
+                    onerror="this.style.display='none'"
+                >
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section id="about">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>About <span>Me</span></h2>
+
+                <p>Mengenal lebih dekat tentang saya</p>
+
+            </div>
+
+
+            <div class="about">
+
+                <div class="about-card">
+
+                    <h3>Tentang Saya</h3>
+
+                    <p>
+                        Saya merupakan siswi SMKN 1 Kawali
+                        jurusan Pengembangan Perangkat Lunak
+                        dan Gim (PPLG). Memiliki kemampuan
+                        dasar dalam PHP, Laravel, HTML, dan
+                        Figma. Saya tertarik untuk
+                        mengembangkan kemampuan serta
+                        berkontribusi di bidang Web
+                        Development. Saya memiliki sikap
+                        disiplin, bertanggung jawab, teliti,
+                        dan memiliki kemauan untuk terus belajar.
+                    </p>
+
+                </div>
+
+
+                <div class="about-card">
+
+                    <h3>Informasi Pribadi</h3>
+
+                    <div class="info">
+
+                        <div class="info-item">
+                            <h4>Nama</h4>
+                            <p>Putri Fitriani Safira</p>
+                        </div>
+
+                        <div class="info-item">
+                            <h4>Sekolah</h4>
+                            <p>SMKN 1 Kawali</p>
+                        </div>
+
+                        <div class="info-item">
+                            <h4>Jurusan</h4>
+                            <p>PPLG</p>
+                        </div>
+
+                        <div class="info-item">
+                            <h4>Minat</h4>
+                            <p>Web Development</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- EDUCATION -->
+
+    <section class="education" id="education">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>My <span>Education</span></h2>
+
+                <p>Riwayat pendidikan</p>
+
+            </div>
+
+
+            <div class="education-card">
+
+                <h3>SMKN 1 Kawali</h3>
+
+                <h4>
+                    Pengembangan Perangkat Lunak
+                    dan Gim (PPLG)
+                </h4>
+
+                <p>2024 – 2027</p>
+
+                <span class="status">
+                    Sedang Menempuh Pendidikan
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- EXPERIENCE -->
+
+    <section id="experience">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>My <span>Experience</span></h2>
+
+                <p>Pengalaman dan kegiatan</p>
+
+            </div>
+
+
+            <div class="experience-card">
+
+                <h3>Pengalaman Kerja</h3>
+
+                <p>
+                    Belum memiliki pengalaman kerja formal.
+                    Namun, saya memiliki pengalaman dalam
+                    mengerjakan proyek pembelajaran di sekolah
+                    yang membantu mengembangkan kemampuan
+                    pemrograman, kerja sama tim, dan tanggung jawab.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- SKILLS -->
+
+    <section class="skills" id="skills">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>My <span>Skills</span></h2>
+
+                <p>Kemampuan teknis yang saya pelajari</p>
+
+            </div>
+
+
+            <div class="skill-container">
+
+                <div class="skill-card">
+                    <div class="skill-icon">L</div>
+                    <h3>Laravel</h3>
+                    <p>Basic</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">PHP</div>
+                    <h3>PHP</h3>
+                    <p>Basic</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">5</div>
+                    <h3>HTML</h3>
+                    <p>Basic</p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">F</div>
+                    <h3>Figma</h3>
+                    <p>Basic</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJECTS -->
+
+    <section id="projects">
+
+        <div class="container">
+
+            <div class="section-title">
+
+                <h2>My <span>Projects</span></h2>
+
+                <p>Hasil proyek pembelajaran saya</p>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <div class="project-image">
+                    📚
+                </div>
+
+                <div class="project-info">
+
+                    <h3>Web Perpustakaan</h3>
+
+                    <p>Agustus 2026</p>
+
+                    <p>
+                        Website perpustakaan untuk mengelola
+                        data buku, anggota, dan peminjaman.
+                        Proyek ini dibuat sebagai bagian
+                        dari pembelajaran pengembangan website.
+                    </p>
+
+                    <div class="tags">
+
+                        <span class="tag">PHP</span>
+                        <span class="tag">HTML</span>
+                        <span class="tag">MySQL</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+
+    <section class="contact" id="contact">
+
+        <div class="container">
+
+            <div class="contact-box">
+
+                <div class="section-title">
+
+                    <h2>Contact <span>Me</span></h2>
+
+                    <p>
+                        Mari terhubung dan berdiskusi
+                        mengenai pengembangan web.
+                    </p>
+
+                </div>
+
+                <p>
+                    Jika ingin mengenal lebih jauh
+                    tentang saya, silakan hubungi
+                    melalui email.
+                </p>
+
+                <a
+                    href="mailto:putrifitrianisafira@gmail.com"
+                    class="btn"
+                >
+                    ✉ Kirim Email
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 Putri Fitriani Safira.
+            All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        const menuBtn =
+            document.getElementById("menuBtn");
+
+        const navLinks =
+            document.getElementById("navLinks");
+
+        menuBtn.addEventListener("click", function() {
+
+            navLinks.classList.toggle("active");
+
+        });
+
+        document.querySelectorAll(".nav-links a")
+            .forEach(function(link) {
+
+                link.addEventListener("click", function() {
+
+                    navLinks.classList.remove("active");
+
+                });
+
+            });
+
+    </script>
+
+</body>
+</html>
